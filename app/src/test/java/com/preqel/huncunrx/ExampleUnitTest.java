@@ -10,8 +10,15 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class ExampleUnitTest {
-    @Test
+
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
+    }
+
+    @Test
+    public void subition_isCorrect() throws Exception {
+        int[] arra = new int[]{5, 1, 10, 23, 34, 2};
+        int result = SearchUtil.binarySearch(arra, 6, 23);
+        assertEquals(3, result);
     }
 }
