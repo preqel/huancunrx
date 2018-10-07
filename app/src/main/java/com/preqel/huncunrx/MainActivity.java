@@ -87,8 +87,8 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
-testErChaShu();
-testErfenSearch();
+        testErChaShu();
+        testErfenSearch();
 
         TestInner testInner = new TestInner();
         TestInner.InnerClass innerClass = testInner.getInstance();
