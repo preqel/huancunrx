@@ -1,5 +1,6 @@
 package com.preqel.huncunrx;
 
+import android.content.Intent;
 import android.support.annotation.MainThread;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
@@ -7,6 +8,7 @@ import android.support.annotation.UiThread;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import com.preqel.treenode.TreeNode;
@@ -59,7 +61,13 @@ public class MainActivity extends AppCompatActivity {
 
         mTextView.setText(getAddress());
 
-
+        mTextView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),testScrollActivity.class);
+                startActivity(intent);
+            }
+        });
 
         setText(R.string.app_name);
 //        String url ="www.baidu.com";
