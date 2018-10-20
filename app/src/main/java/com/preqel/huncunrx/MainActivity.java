@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }.start();
 
-
         mTextView.setText(getAddress());
 
         mTextView.setOnClickListener(new View.OnClickListener(){
@@ -79,10 +78,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void testErfenSearch() {
-
-        int[] arra = new int[]{5,1,10,23,34,2};
-         int result =   SearchUtil.binarySearch(arra,6,23);
-        Log.d("TAG","preqel testErfenSearch:"+result );
+        int[] arra = new int[]{5, 1, 10, 23, 34, 2};
+        int result = SearchUtil.binarySearch(arra, 6, 23);
+        Log.d("TAG", "preqel testErfenSearch:" + result);
     }
 
     private void testErChaShu() {

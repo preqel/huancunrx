@@ -8,48 +8,46 @@ import android.util.Log;
 
 public class FastSort {
 
-    int[] list = {5,3,1,2,5,9};
+    int[] list = {5, 3, 1, 2, 4, 9};
 
-    public void doFastSort(){
-        fastSort(list,0,list.length);
+    public void doFastSort() {
+        fastSort(list, 0, list.length-1);
     }
 
-    public void  fastSort(int[] number,int start,int end){
-        int middle = findMiddle(list);
-       // fastSort(list, 0, middle);
-      //  fastSort(list, middle, list.length-1);
+    public void fastSort(int[] number, int start, int end) {
+        if(start< end) {
+            int middle = findMiddle(list, start, end);
+            fastSort(list, start, middle - 1);
+            fastSort(list, middle + 1, end);
+        }
     }
 
-    public void pirntResult(){
+    public void pirntResult() {
         StringBuilder sb = new StringBuilder();
-        for(int i=0;i<list.length;i++){
-            sb.append(list[i]+" ");
+        for (int i = 0; i < list.length; i++) {
+            sb.append(list[i] + " ");
         }
-        Log.d("TAG","fastsort "+sb.toString());
+        System.out.println("快速排序result"+ sb.toString());
     }
 
-    private int findMiddle(int[] list) {
-        int temp = list[0];
-        int low = 0;
-        int hign = list.length-1;
-        while(low < hign){
+    private int findMiddle(int[] list,int low,int hign) {
 
-            for(int i=low;i<hign;i++){
-                if(list[low]>= list[i]){
-                    list[low]= list[i];
-                    list[i] = temp;
-                }
-                low ++;
-            }
+        int temp = list[low];
 
-            for(int j = hign ;j>low;j--){
-                if (list[hign] > list[j]) {
-                    list[hign] = list[j];
-                    list[hign] = temp;
-                }
-                hign--;
+        while (low < hign) {
+
+            while (low < hign && list[hign] > temp) {
+                    hign--;
             }
+            list[low] = list[hign];
+
+            while (low < hign && list[low] < temp) {
+                    low++;
+            }
+            list[hign] = list[low];
+
         }
+        list[low] = temp;
         return hign;
     }
 }

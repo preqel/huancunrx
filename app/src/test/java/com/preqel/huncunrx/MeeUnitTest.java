@@ -61,5 +61,11 @@ public class MeeUnitTest {
         System.out.print(spy.get(0));
     }
 
+    @Test
+    public void testFastSortTemp() {
+       FastSort fastSort = new FastSort();
+       fastSort.doFastSort( );
+       fastSort.pirntResult();
+    }
 
 }
