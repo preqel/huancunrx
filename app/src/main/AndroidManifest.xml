@@ -4,6 +4,7 @@
 
     <application
         android:allowBackup="true"
+        android:name="com.preqel.ExampleApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -17,6 +18,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".testScrollActivity">
+
+        </activity>
+        <activity android:name=".testOOMActivity">
+
+        </activity>
+        <activity android:name=".testOOMTwoActivity">
 
         </activity>
     </application>

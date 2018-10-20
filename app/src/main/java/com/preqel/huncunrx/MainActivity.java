@@ -64,32 +64,14 @@ public class MainActivity extends AppCompatActivity {
         mTextView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(),testScrollActivity.class);
+                Intent intent = new Intent(v.getContext(),testOOMActivity.class);
                 startActivity(intent);
             }
         });
 
         setText(R.string.app_name);
-//        String url ="www.baidu.com";
-//        Request request = new Request.Builder().url(url).build();
-//
-//
-//        OkHttpClient client = new OkHttpClient();
-//        client.newCall(request).enqueue(new Callback() {
-//            @Override
-//            public void onFailure(Request request, IOException e) {
-//
-//            }
-//
-//            @Override
-//            public void onResponse(Response response) throws IOException {
-//
-//            }
-//        });
-
         testErChaShu();
         testErfenSearch();
-
         TestInner testInner = new TestInner();
         TestInner.InnerClass innerClass = testInner.getInstance();
 
